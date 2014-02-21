@@ -1,0 +1,64 @@
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes osc {
+  0% { -webkit-transform: rotate(-5deg); }
+  30% { -webkit-transform: rotate(0deg); }
+  35% { opacity: 0; }
+  40% { opacity: 1; }
+  45% { opacity: 0; }
+  50% { opacity: 1; }
+  55% { opacity: 0; }
+  60% { opacity: 1; }
+  65% { opacity: 0; }
+  70% { opacity: 1; -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(5deg); }
+}
+
+@keyframes osc {
+  0% { transform: rotate(-5deg); }
+  30% { transform: rotate(0deg); }
+  35% { opacity: 0; }
+  40% { opacity: 1; }
+  45% { opacity: 0; }
+  50% { opacity: 1; }
+  55% { opacity: 0; }
+  60% { opacity: 1; }
+  65% { opacity: 0; }
+  70% { opacity: 1; transform: rotate(0deg); }
+  100% { transform: rotate(5deg); }
+}
+
+.cf:before, .cf:after { content: " "; /* 1 */ display: table; /* 2 */ }
+.cf:after { clear: both; }
+/** For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+.cf { *zoom: 1; }
+
+html, body { height: 100%; }
+body { overflow: hidden; }
+.wrapper { position: relative; z-index: 2; }
+.main-header { position: relative; width: 100%; }
+.p1 {margin: 0; text-align: center; font: 200.0px Helvetica;
+
+	-webkit-animation-name: osc; 
+  	-webkit-animation-duration: 2.5s; /* 2 seconds */
+  	-webkit-animation-iteration-count: infinite; 
+  	-webkit-animation-direction: alternate;
+
+	animation-name: osc; 
+  	animation-duration: 2.5s; /* 2 seconds */
+  	animation-iteration-count: infinite; 
+  	animation-direction: alternate;
+
+} 
+
+.p2 {margin: 0; text-align: center; font: 12.0px Helvetica}
+
+.pic { position: relative; }
+	.dot { display: none; border-radius: 75px; height: 150px; left: 20%; margin: 175px 20px 0; position: absolute; width: 150px; }
+	.is-red { background-color: #900; }
+
+	.kegger { display: block; margin: 40px auto 0; width: 30%; }
