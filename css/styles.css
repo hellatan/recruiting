@@ -61,4 +61,4 @@ body { overflow: hidden; }
 	.dot { display: none; border-radius: 75px; height: 150px; left: 20%; margin: 175px 20px 0; position: absolute; width: 150px; }
 	.is-red { background-color: #900; }
 
-	.kegger { display: block; margin: 40px auto 0; width: 30%; }
+	.kegger { display: block; margin: 40px auto 0; width: 50%; }
